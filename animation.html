@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация</title>
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes animation-from {
+            from {
+                margin-top: 10px;
+            }
+            to {
+                margin-top: 120px;
+            }
+        }
+        @keyframes animation-to {
+            from {
+                margin-top: 120px;
+            }
+            to {
+                margin-top: 10px;
+            }
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: black;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 10px;
+            transition-property: background-color;
+            transition-duration: 2s;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item:hover{
+            background-color: red;
+            animation: animation-from 2s infinite alternate;
+
+            /* animation: animation-to 2s;   */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1"></div>
+        <div class="item" id="item2"></div>
+        <div class="item" id="item3"></div>
+        <div class="item" id="item4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
